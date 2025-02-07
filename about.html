@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Pavan's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+   <nav>
+    <a href="index.html" class="logo">
+        Pavan<span>.</span>
+    </a>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+    <main>
+        <div class="about-container">
+            <div class="sidebar">
+                <button class="tab" onclick="loadContent('about')">About Me</button>
+                <button class="tab" onclick="loadContent('education')">Education</button>
+                <button class="tab" onclick="loadContent('skills')">Skills</button>
+                <button class="tab" onclick="loadContent('experience')">Experience</button>
+                <button class="tab" onclick="loadContent('projects')">Projects</button>
+            </div>
+
+            <div class="content" id="content">
+                <!-- Content will be loaded dynamically here -->
+                <h2>Welcome</h2>
+                <p>Welcome to my portfolio! Click on the options in the sidebar to explore more about me.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sai Pavan Nagendla. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for dynamically loading content
+        function loadContent(section) {
+            const content = document.getElementById('content');
+            let html = '';
+
+            switch (section) {
+                case 'about':
+                    html = `
+                        <h2>About Me</h2>
+                        <p>Driven CS professional with expertise in Full Stack Development, Software Engineering, and Java.</p>
+                        <p>Leveraging a strong foundation in computer science and impactful projects, I aim to develop and maintain web applications  .</p>
+                        <p><strong>Name:</strong> Sai Pavan Nagendla</p>
+                        <p><strong>Experience:</strong> 3 Years</p>
+                
+                    `;
+                    break;
+                    case 'education':
+                    html = `
+                        <div class="education-box-container">
+                            <h2>Education</h2>
+                
+                            <!-- B.Tech Box -->
+                            <div class="education-box">
+                                <h3>Bachelor of Technology</h3>
+                                <p><strong>Field:</strong> Computer Science and Engineering</p>
+                                <p><strong>Institution:</strong> Vignan University</p>
+                                <p><strong>Graduation Year:</strong> Aug 2021</p>
+                            </div>
+                
+                            <!-- Masters Box -->
+                            <div class="education-box">
+                                <h3>Masters</h3>
+                                <p><strong>Field:</strong> Information Technology </p>
+                                <p><strong>Institution:</strong> University Of North Carolina at Charlotte</p>
+                                <p><strong>Graduation Year:</strong> May 2023</p>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                
+                
+
+                    case 'skills':
+                    html = `
+                        <h2>Skills</h2>
+                        <div class="skills-icons">
+                            <ul>
+                                <li><i class="fab fa-java"></i> Java </li>
+                                <li><i class="fab fa-spring"></i> Spring </li>
+                                <li><i class="fas fa-database"></i> SQL</li>
+                                <li><i class="fas fa-chart-bar"></i> J2EE</li>
+                                <li><i class="fas fa-brain"></i> RESTful APIs </li>
+                                <li><i class="fas fa-chart-pie"></i> Spring MVC </li>
+                                <li><i class="fab fa-java"></i> Java</li>
+                                <li><i class="fab fa-js"></i> JavaScript</li>
+                                <li><i class="fab fa-html5"></i> HTML</li>
+                                <li><i class="fab fa-css3-alt"></i> CSS</li>
+                                <li><i class="fab fa-aws"></i> AWS</li>
+                                <li><i class="fab fa-google"></i> GCP</li>
+                            </ul>
+                        </div>
+                    `;
+                    break;
+                
+
+                    case 'experience':
+                    html = `
+                        <h2>Experience</h2>
+                
+                        <!-- MUFG -->
+                        <div class="experience-box">
+                            <h3>SOftware Engineer</h3>
+                            <p><strong>Company:</strong> MUFG </p>
+                            <p><strong>Duration:</strong> May 2023 - Present </p>
+                            <ul>
+                                <li>Proficient in the Spring Framework, specializing in Spring Boot, Spring MVC, and Spring Security, contributing to the creation of robust backend systems.</li>
+                                <li>Actively involved in Java 17 development, applying advanced features like lambda expressions, streams, and functional interfaces to build scalable and efficient applications.	</li>
+                                <li>>Analyzed and debugged FinTech codebases, increasing system reliability by 30% and reducing critical bugs by 40%, while also conducting log analysis for root cause identification.</li></li>
+                                <li>Integrated essential third-party APIs and services, such as the T24 payment gateway, enhancing the banking application's functionality.</li>
+                            </ul>
+                        </div>
+                
+                        <!-- TCS -->
+                        <div class="experience-box">
+                            <h3>Software Developer</h3>
+                            <p><strong>Company:</strong> TCS</p>
+                            <p><strong>Duration:</strong> Jan 2021 - Dec 2021</p>
+                            <ul>
+                                <li>Elevated website performance by 20% and increased user engagement by designing interactive user screens with HTML, CSS3, Bootstrap, TypeScript, and Angular.</li>
+                                <li>Experienced in Core Java concepts such as OOP Concepts, Collections Framework, and Exception Handling, I/O System, Multi-Threading, JDBC, Generics.</li>
+                                <li>Designed and implemented REST API services using Spring Boot, Maven, and MySQL, while developing software with Core Java, C++, Multithreading, Spring, and Hibernate to enhance SQL procedures and triggers for robust functionality.</li>
+                                <li> Implemented GitHub best practices, refined Jira management, conducted code reviews, and established Confluence pages for documentation, achieving a 30% increase in team productivity and a 20% improvement in project efficiency.</li>
+
+                            </ul>
+                        </div>
+                    `;
+                    break;
+                
+
+                    case 'projects':
+    html = `
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <a href="https://github.com/Pavannagendla12/resilient" target="_blank" class="project-card">
+                <h3>Resilient E-Commerce Platform using AWS Services </h3>
+                <p><strong>Tech Stack:</strong>  REST API, EC2, S3, AMI, GITSVM</p>
+                <p>•	Developed a robust E-Commerce web application using NodeJS, orchestrating the implementation of 10 REST API endpoints for elevated functionality.</p>
+            </a>
+            <a href="https://github.com/Pavannagendla12/campus_navigation" target="_blank" class="project-card">
+                <h3>Campus Navigation App Development </h3>
+                <p><strong>Tech Stack:</strong> Java Spring Boot, JPA, MySQL, HTML, CSS, JavaScript, JSP</p>
+                <p>•	Developed a scalable app architecture capable of handling varying user loads, particularly during peak times, showcasing proficiency in system scalability.</p>
+            </a>
+            <a href="https://github.com/Pavannagendla12/IPL_New_Ball_Analysis" target="_blank" class="project-card">
+                <h3>IPL New Ball Analysis</h3>
+                <p><strong>Tech Stack:</strong> Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook </p>
+                <p>This project analyzes the number of wickets taken with the new ball in IPL matches. The dataset includes details on matches, teams, venues, bowlers, and wickets taken within the first few overs using the new ball.</p>
+            </a>
+            <a href="https://github.com/Pavannagendla12/Analysis-of-Pat-Cummins" target="_blank" class="project-card">
+                <h3> Pat Cummins Wickets Analysis  </h3>
+                <p><strong>Tech Stack:</strong> Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook </p>
+                <p> This project analyzes Pat Cummins' wicket-taking performance from 2005 to 2024, focusing on:
+
+New Ball vs. Old Ball Effectiveness
+Country-wise Performance Trends
+Match Situations (Powerplay, Middle Overs, Death Overs)
+Impact of Pitch Conditions and Venues.</p>
+            </a>
+            
+        </div>
+    `;
+    break;        
+
+                default:
+                    html = `<h2>Error</h2><p>Content not found.</p>`;
+            }
+
+            content.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
